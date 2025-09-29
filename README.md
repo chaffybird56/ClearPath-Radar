@@ -1,4 +1,4 @@
-# Roadside‑Clutter Radar — MTI Filtering on DSP (MATLAB + C)
+# Roadside‑Clutter Radar — MTI Filtering on DSP 
 
 > Suppress stationary roadside clutter near 0‑Hz Doppler so moving vehicles are emphasized. Compact FIR/IIR front‑end filters (MATLAB), two‑/three‑pulse MTI cancellers (DSP), and a windowed Doppler FFT complete the chain.
 
