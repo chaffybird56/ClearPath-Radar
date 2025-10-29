@@ -21,36 +21,35 @@ Across sweeps, each range bin records a complex slow‑time sequence. Stationary
 
 ## Mathematical formulation
 
-Fix a range bin and let \(x[n]\) be the complex slow‑time sample at sweep \(n\).
+Fix a range bin and let $x[n]$ be the complex slow-time sample at sweep $n$.
 
-### Two‑pulse MTI (first difference)
+### Two-pulse MTI (first difference)
 
 $$
 y[n] = x[n] - x[n-1]
 $$
 
-Frequency response \(H_2(e^{j\omega}) = 1 - e^{-j\omega}\). Magnitude
+Frequency response $H_2(e^{j\omega}) = 1 - e^{-j\omega}$. Magnitude
 
 $$
-\lvert H_2(e^{j\omega})\rvert = 2\,\big\lvert\sin\big(\tfrac{\omega}{2}\big)\big\rvert,
+\lvert H_2(e^{j\omega})\rvert = 2\,\left\lvert\sin\left(\frac{\omega}{2}\right)\right\rvert,
 $$
 
-a high‑pass with a notch at \(\omega=0\).
+a high-pass with a notch at $\omega=0$.
 
-### Three‑pulse MTI (second difference)
+### Three-pulse MTI (second difference)
 
 $$
 y[n] = x[n] - 2x[n-1] + x[n-2]
 $$
 
-Frequency response \(H_3(e^{j\omega}) = (1 - e^{-j\omega})^2\). Magnitude
+Frequency response $H_3(e^{j\omega}) = (1 - e^{-j\omega})^2$. Magnitude
 
 $$
-\lvert H_3(e^{j\omega})\rvert = 4\,\sin^2\!\big(\tfrac{\omega}{2}\big),
+\lvert H_3(e^{j\omega})\rvert = 4\,\sin^2\left(\frac{\omega}{2}\right),
 $$
 
-a wider, steeper notch around 0 Hz (more suppression of slowly varying clutter) with modest noise gain away from zero.
-
+a wider, steeper notch around 0 Hz (more suppression of slowly varying clutter) with modest noise gain away from zero.
 <!-- MTI response plot placeholder -->
 <p align="center">
   <img width="647" height="363" alt="SCR-20250929-jtfb" src="https://github.com/user-attachments/assets/aed43adc-ae64-4b81-9ab3-4c939d6ce833" />
