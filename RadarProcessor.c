@@ -23,7 +23,7 @@ short convert_double_to_short_for_output(double max_value, double input_value);
 
 #ifndef USE_FFT_LIB
 void prepare_fft_data(COMPLEX* data, int N){
-	// need to fill
+	// Zero-pad FFT input beyond chirp length
 	int i;
 
 	for (i = 0; i < N; i++){
@@ -109,7 +109,7 @@ void main()
 
 	//FFT(data_fft_lib, w_fft_lib, PTS);
 
-	// need to fill
+	// Zero-pad FFT input beyond chirp length
 #endif
 	Uint32 timer_end = TIMER_getCount(hTimer);	
 	Uint32 diff = (timer_end - timer_start) - timer_overhead;
