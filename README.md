@@ -1,5 +1,7 @@
 # Roadside‑Clutter Radar — MTI Filtering on DSP 
 
+[![CI](https://img.shields.io/github/actions/workflow/status/chaffybird56/ClearPath-Radar/ci.yml?label=CI&logo=github)](https://github.com/chaffybird56/ClearPath-Radar/actions/workflows/ci.yml)
+
 > Suppress stationary roadside clutter near 0‑Hz Doppler so moving vehicles are emphasized. Compact FIR/IIR front‑end filters (MATLAB), two‑/three‑pulse MTI cancellers (DSP), and a windowed Doppler FFT complete the chain.
 
 <!-- Scene/overview placeholder -->
