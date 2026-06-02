@@ -11,8 +11,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Compile RadarProcessor
+      - name: Host compile check (CI stubs)
         run: |
           sudo apt-get update
           sudo apt-get install -y gcc
-          gcc -Wall -Wextra -c RadarProcessor.c -o /dev/null
+          gcc -Wall -Wextra -Wno-main -Wno-unused-parameter -Wno-unused-but-set-variable \
+            -DCI_HOST_BUILD -I ci/stubs ci/stubs/ci_host.c -c -o /tmp/ci_host.o
+          gcc -Wall -Wextra -Wno-main -Wno-unused-parameter -Wno-unused-but-set-variable \
+            -DCI_HOST_BUILD -I ci/stubs -c RadarProcessor.c -o /tmp/radar.o
